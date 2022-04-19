@@ -9,6 +9,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = { title, content };
+  }
 
   return (
     <>
