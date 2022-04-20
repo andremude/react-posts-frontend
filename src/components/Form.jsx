@@ -1,19 +1,30 @@
 import React, {useState} from 'react'
+import axios from 'axios'
 
 
-const Form = () => {
+const Form = ({ updateList }) => {
 
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = { title, content };
+    const dataPost = { title, content };
+
+    try {
+      const res = await axios
+      .post('http://localhost:3000/api/v1/posts', {post: dataPost})
+
+      updateList(res.data)
+
+    } catch(error) {
+      console.log(error)
+    }
   }
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit}>
         <div>
           <label>Post Title</label>
           <input
@@ -35,6 +46,7 @@ const Form = () => {
             required
           />
         </div>
+        <button type='submit'>Post</button>
       </form>
     </>
   )
