@@ -5,3 +5,22 @@
   background-color: #F5F6F7;
   font-family: 'Lato', sans-serif;
 }
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 40px;
+  background: orange;
+  /* color: white; */
+  color: black;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 3px 5px #ccc;
+}
+
+.back-to-top:hover {
+  background: crimson;
+  color: white;
+}
