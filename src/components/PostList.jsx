@@ -33,7 +33,7 @@ const PostList = () => {
 
   return (
     <>
-    <Form updatePostList={updateList}/>
+    <Form updateList={updateList}/>
       <div>
         {posts.map((post) => (
           <Post

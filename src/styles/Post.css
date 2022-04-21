@@ -1,0 +1,16 @@
+.post-container {
+  margin: 40px auto;
+  padding: 30px;
+  width: 800px;
+  border-top: 1px solid black;
+  /* border-bottom: 1px solid black; */
+}
+
+.post-container h2 {
+  margin: 5px 0px;
+}
+
+.post-container p {
+  margin: 0px;
+  text-align: justify;
+}

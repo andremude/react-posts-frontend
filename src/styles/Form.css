@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.form-container {
+  width: 100%;
+  border-top: solid black 1px;
+  /* border-bottom: solid black 1px; */
+  padding: 5px 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.title-input {
+  height: 30px;
+  min-height: 20px;
+  max-height: 100px;
+  width: 600px;
+  max-width: 600px;
+  min-width: 600px;
+  padding-left: 5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+}
+
+.content-input {
+  height: 80px;
+  min-height: 40px;
+  max-height: 300px;
+  width: 600px;
+  max-width: 600px;
+  min-width: 600px;
+  padding-left: 5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+textarea {
+  height: 80px;
+  width: 400px;
+}
+
+.post-btn {
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #1d1d5f;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.post-btn:hover {
+  transform: scale(1.05);
+}
