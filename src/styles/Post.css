@@ -13,3 +13,19 @@
   margin: 0px;
   text-align: justify;
 }
+
+@media (max-width: 1025px) {
+
+  .post-container {
+    margin: 15px auto;
+    padding: 14px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 769px) {
+
+  .post-container {
+    width: 300px;
+  }
+}

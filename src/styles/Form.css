@@ -2,8 +2,7 @@
 
 .form-container {
   width: 100%;
-  border-top: solid black 1px;
-  /* border-bottom: solid black 1px; */
+  background-color: #F5F6F7;
   padding: 5px 0px;
 }
 
@@ -72,4 +71,34 @@ textarea {
 
 .post-btn:hover {
   transform: scale(1.05);
+}
+
+@media (max-width: 1025px) {
+
+.title-input {
+  width: 400px;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.content-input {
+  width: 400px;
+  max-width: 400px;
+  min-width: 300px;
+}
+}
+
+@media (max-width: 769px) {
+
+.title-input {
+  width: 300px;
+  max-width: 300px;
+  min-width: 300px;
+}
+
+.content-input {
+  width: 300px;
+  max-width: 300px;
+  min-width: 300px;
+}
 }
