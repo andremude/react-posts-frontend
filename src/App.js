@@ -1,12 +1,51 @@
-import './App.css';
-import { useEffect, useState } from "react";
-import Header from './components/Header';
-import PostList from './components/PostList'
-import Footer from './components/Footer';
+import React, { useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes, useNavigate} from 'react-router-dom';
+import SignUp from "./components/SignUp"
+import Login from "./components/Login";
+import NavBar from "./components/NavBar";
+import PostList from "./components/PostList";
+import Footer from "./components/Footer"
+import Home from "./components/Home";
+import "./styles/App.css"
 
 function App() {
 
   const [showButton, setShowButton] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch("http://localhost:3000/api/v1/autologin", {
+      credentials: "include",
+    })
+      .then((r) => {
+        if (!r.ok) throw Error("Not logged in!");
+        return r.json();
+      })
+      .then((user) => setCurrentUser(user))
+      .catch((err) => console.error(err));
+  }, []);
+
+  // useEffect(() => {
+  //   if (!currentUser) {
+  //     navigate("/login");
+  //   }
+  //   }, [currentUser, navigate]);
+
+  function handleLogout() {
+    fetch("http://localhost:3000/api/v1/logout", {
+    method: "POST",
+    credentials: "include",
+    })
+      .then((r) => r.json())
+      .then(() => setCurrentUser(null));
+      navigate("/login")
+  }
+
+  function onUpdateUser(user) {
+    setCurrentUser(user);
+  }
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -25,21 +64,38 @@ function App() {
     });
   };
 
-
   return (
-  <>
-    <div className="App">
-      <Header />
-      <PostList />
+  <div className="app">
+    <NavBar currentUser={currentUser} onLogout={handleLogout} />
+    <main>
+      <Routes>
+        <Route path="/signup" element={<SignUp onUpdateUser={onUpdateUser} />} />
+        <Route path="/login" element={<Login onUpdateUser={onUpdateUser} />} />
+        {/* <Route path="/profile" element={ currentUser ? (
+            <Profile currentUser={currentUser} onUpdateUser={onUpdateUser} />
+          ) : (
+            <Navigate to="/" />
+          )} /> */}
+        {/* <Route path="/home" element={currentUser ? (
+            <h1>Welcome, {currentUser.username}</h1>
+            ) : (
+            <Navigate to="/" />
+          )} /> */}
+        <Route path="/home" element={<Home/>}/>
+        <Route path="/" element={<h1 className="auth-title">Please Login or Sign Up</h1>} />
+        <Route path="/posts" element={currentUser ? (
+            <PostList/>
+            ) : (
+            <Navigate to="/" />)} />
+      </Routes>
       <Footer />
-    </div>
-
+    </main>
     {showButton && (
       <button onClick={scrollToTop} className="back-to-top">
         &#8679;
       </button>
     )}
-  </>
+  </div>
   );
 }
 

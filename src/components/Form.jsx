@@ -14,8 +14,7 @@ const Form = ({ updateList }) => {
     const dataPost = { title, content };
     try {
       const res = await axios
-      .post('http://localhost:3000/api/v1/posts', {post: dataPost})
-
+      .post('http://localhost:3000/api/v1/posts',{post: dataPost}, {withCredentials: true})
       updateList(res.data)
       setTitle("");
       setContent("");
@@ -24,14 +23,18 @@ const Form = ({ updateList }) => {
     } catch(error) {
       console.log(error)
     }
-  }
-
-  const onClick = useCallback(() => {
     confetti({
       particleCount: 150,
       spread: 60
     });
-  }, []);
+  }
+
+  // const onClick = useCallback(() => {
+  //   confetti({
+  //     particleCount: 150,
+  //     spread: 60
+  //   });
+  // }, []);
 
 
   return (
@@ -81,7 +84,7 @@ const Form = ({ updateList }) => {
         </div>
         <button type='submit'
           className='post-btn'
-          onClick={onClick}
+          // onClick={onClick}
           >
           <span>🎉</span>
           <span>Submit</span>

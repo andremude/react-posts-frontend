@@ -5,4 +5,7 @@
   align-items: center;
   justify-content: center;
   height: 100px;
+  font-weight: bold;
+  bottom: 0;
+  margin-bottom: 0
 }

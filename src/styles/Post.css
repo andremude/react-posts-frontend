@@ -3,6 +3,9 @@
   padding: 30px;
   width: 800px;
   border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 20px 20px 0 0;
+  background-color: white;
 }
 
 .post-container h2 {
@@ -12,6 +15,10 @@
 .post-container p {
   margin: 0px;
   text-align: justify;
+}
+
+.asterisks {
+  text-align: center;
 }
 
 @media (max-width: 1025px) {
@@ -28,4 +35,21 @@
   .post-container {
     width: 300px;
   }
+}
+
+.dots {
+  height: 25px;
+  display: flex;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-title-user {
+  text-align: left;
 }
