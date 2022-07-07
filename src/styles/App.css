@@ -8,23 +8,26 @@
 
 .back-to-top {
   position: fixed;
+  height: 40px;
+  width: 40px;
   bottom: 20px;
   right: 20px;
   font-size: 40px;
-  background-color: #1d1d5f;
-  color: white;
   cursor: pointer;
-  border-radius: 10px;
-  border: 2px solid white;
+  color: orange;
 }
 
 .back-to-top:hover {
-  background: orange;
-  color: white;
+  background-color: white;
+  border-radius: 50%;
 }
 
 .auth-title {
   justify-content: center;
   text-align: center;
   background-color: red;
+}
+
+.arrow-svg {
+  height: 40px;
 }

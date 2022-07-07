@@ -8,6 +8,7 @@ import PostList from "./components/PostList";
 import Footer from "./components/Footer"
 import Home from "./components/Home";
 import "./styles/App.css"
+import Arrow from './images/arrow.svg'
 
 function App() {
 
@@ -91,9 +92,10 @@ function App() {
       <Footer />
     </main>
     {showButton && (
-      <button onClick={scrollToTop} className="back-to-top">
-        &#8679;
-      </button>
+      <img src={Arrow} alt="arrow" onClick={scrollToTop} className="back-to-top" />
+      // <button onClick={scrollToTop} className="back-to-top">
+        /* &#8679; */
+      // </button>
     )}
   </div>
   );
