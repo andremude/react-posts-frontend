@@ -83,7 +83,7 @@ function App() {
             <Navigate to="/" />
           )} /> */}
         <Route path="/home" element={<Home/>}/>
-        <Route path="/" element={<h1 className="auth-title">Please Login or Sign Up</h1>} />
+        <Route path="/" element={<h1 className="auth-title">PLEASE, LOGIN OR SIGNUP TO VIEW POSTS</h1>} />
         <Route path="/posts" element={currentUser ? (
             <PostList/>
             ) : (
