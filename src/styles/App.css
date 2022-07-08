@@ -22,13 +22,18 @@
   border-radius: 50%;
 }
 
-.auth-title {
+.auth-container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
-  /* background-color: red; */
   margin: 100px auto;
-  margin-bottom: 300px;
-  /* height: 800px; */
+  height: 500px;
+}
+
+.authentication-svg {
+  height: 100px;
+  margin: 20px
 }
 
 .arrow-svg {

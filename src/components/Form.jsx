@@ -41,7 +41,7 @@ const Form = ({ updateList }) => {
     <div className='form-container'>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Post Title (Max. 300 characters)</label>
+          <label>Title</label>
           <textarea
             rows="2"
             cols="50"
@@ -50,7 +50,7 @@ const Form = ({ updateList }) => {
             onChange={(e) => setTitle(e.target.value)}
             required
             className='title-input'
-            placeholder='Enter post title' />
+            placeholder='Enter title' />
           {/* <input
             type="text"
             name="title"
@@ -72,7 +72,7 @@ const Form = ({ updateList }) => {
             onChange={(e) => setContent(e.target.value)}
             required
             className='content-input'
-            placeholder='Enter post content' />
+            placeholder='Enter content' />
           {/* <input
             type="text"
             name="content"

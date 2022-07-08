@@ -53,3 +53,8 @@ input:hover {
 /* form {
   border: 2px solid red;
 } */
+
+a {
+  text-decoration: underline;
+  color: black
+}

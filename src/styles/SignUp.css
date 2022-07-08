@@ -40,3 +40,8 @@ input {
   align-items: center;
   justify-content: center;
 }
+
+a {
+  text-decoration: underline;
+  color: black
+}

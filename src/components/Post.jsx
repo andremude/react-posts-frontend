@@ -1,7 +1,8 @@
 import React from 'react'
 import '../styles/Post.css'
 // import Likes from './Likes'
-import Dots from '../images/dots.png'
+// import Dots from '../images/dots.png'
+import DropMenu from './DropMenu.jsx'
 
 const Post = ({title, content, user}) => {
   return (
@@ -11,7 +12,8 @@ const Post = ({title, content, user}) => {
           <h2>{title}</h2>
           <span>Posted by: {user}</span>
         </div>
-        <img src={Dots} alt="dots" className="dots" />
+          <DropMenu className="dots"/>
+        {/* <img src={Dots} alt="dots" className="dots" /> */}
       </div>
       <br />
       <br />

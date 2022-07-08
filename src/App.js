@@ -9,6 +9,7 @@ import Footer from "./components/Footer"
 import Home from "./components/Home";
 import "./styles/App.css"
 import Arrow from './images/arrow.svg'
+import Authenticate from './images/auth.svg'
 
 function App() {
 
@@ -83,7 +84,10 @@ function App() {
             <Navigate to="/" />
           )} /> */}
         <Route path="/home" element={<Home/>}/>
-        <Route path="/" element={<h1 className="auth-title">PLEASE, LOGIN OR SIGNUP TO VIEW POSTS</h1>} />
+        <Route path="/" element={<div className="auth-container">
+                                  <img src={Authenticate} alt="authenticate" className="authentication-svg" />
+                                  <h1>LOG IN OR SIGN UP TO VIEW POSTS</h1>
+                                </div>} />
         <Route path="/posts" element={currentUser ? (
             <PostList/>
             ) : (
