@@ -83,12 +83,12 @@ function App() {
             ) : (
             <Navigate to="/" />
           )} /> */}
-        <Route path="/home" element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
         <Route path="/posts" element={currentUser ? (
             <PostList/>
             ) : (
-            <Navigate to="/" />)} />
-        <Route path="/" element={<div className="auth-container">
+            <Navigate to="/auth" />)} />
+        <Route path="/auth" element={<div className="auth-container">
                                   <img src={Authenticate} alt="authenticate" className="authentication-svg" />
                                   <h1>LOG IN OR SIGN UP TO VIEW POSTS</h1>
                                 </div>} />

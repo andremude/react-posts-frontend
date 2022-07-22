@@ -7,7 +7,7 @@ function NavBar({ currentUser, onLogout }) {
   return (
     <header>
       <div>
-        <Link to="/home">Home</Link>
+        <Link to="/">Home</Link>
       </div>
       <div>
         <Link to="/posts">Posts</Link>
