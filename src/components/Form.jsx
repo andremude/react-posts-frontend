@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react'
+import React, {useState} from 'react'
 import '../styles/Form.css'
 import axios from 'axios'
 import confetti from "https://cdn.skypack.dev/canvas-confetti@1";
@@ -29,14 +29,6 @@ const Form = ({ updateList }) => {
     });
   }
 
-  // const onClick = useCallback(() => {
-  //   confetti({
-  //     particleCount: 150,
-  //     spread: 60
-  //   });
-  // }, []);
-
-
   return (
     <div className='form-container'>
       <form onSubmit={handleSubmit}>
@@ -51,15 +43,6 @@ const Form = ({ updateList }) => {
             required
             className='title-input'
             placeholder='Enter title' />
-          {/* <input
-            type="text"
-            name="title"
-            maxlength="300"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            required
-            className='title-input'
-          /> */}
         </div>
 
         <div>
@@ -73,19 +56,8 @@ const Form = ({ updateList }) => {
             required
             className='content-input'
             placeholder='Enter content' />
-          {/* <input
-            type="text"
-            name="content"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            required
-            className='content-input'
-          /> */}
         </div>
-        <button type='submit'
-          className='post-btn'
-          // onClick={onClick}
-          >
+        <button type='submit' className='post-btn'>
           <span>🎉</span>
           <span>Submit</span>
         </button>

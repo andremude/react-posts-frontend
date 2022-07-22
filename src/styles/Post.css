@@ -7,6 +7,7 @@
   /* border-radius: 20px 20px 0 0; */
   border-radius: 25px;
   background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .post-container h2 {
@@ -20,6 +21,20 @@
 
 .asterisks {
   text-align: center;
+}
+
+.post-footer {
+  display: flex;
+  justify-content:space-between;
+  align-items: center
+}
+
+.delete-icon {
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color:rgb(211, 144, 157)
 }
 
 @media (max-width: 1025px) {

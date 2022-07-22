@@ -10,14 +10,12 @@ const Home = () => {
     <>
     <div className='home-hero'>
       <h1>Explore. Learn. Connect.</h1>
-      {/* <a href="#" className="btn-green">Posts</a> */}
       <Link to="/posts" className="btn-blue">Posts</Link>
     </div>
     <div className="how-works-container">
       <h2>How it works</h2>
       <div className="cards">
         <div className="card">
-          {/* <img src = "images/apply.svg" attr="apply svg"> */}
           <img src={Explore} alt="explore" className="card-svg" />
           <h3>Explore</h3>
           <p>Lorem ipsum dolor sit amet.</p>

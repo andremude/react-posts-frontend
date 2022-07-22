@@ -5,8 +5,7 @@ import axios from 'axios'
 import Form from './Form'
 import '../styles/PostList.css'
 
-
-const PostList = () => {
+const PostList = ({id}) => {
 
   const [posts, setPosts] = useState([])
   const [isUpdate, setUpdate] = useState(false)
@@ -22,13 +21,10 @@ const PostList = () => {
     setPosts(data.reverse())
   }
 
-
-
   const updateList = (Post) => {
     let list = posts;
     list.unshift(Post);
     setPosts(posts);
-
     setUpdate(true)
   }
 
@@ -37,16 +33,16 @@ const PostList = () => {
     <Form updateList={updateList}/>
       <div className='post-list-container'>
         {posts.map((post) => (
+          <>
           <Post
             key={post.id}
             title={post.title}
             content={post.content}
             user={post.user_id}
-            // user={users.find(
-            //   user =>
-            //   post.userid === user.id
-            // )}
+            id={post.id}
+            getPosts={getPosts}
               />
+            </>
             ))}
       </div>
     </>

@@ -18,7 +18,7 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/v1/autologin", {
+      fetch("http://localhost:3000/api/v1/autologin", {
       credentials: "include",
     })
       .then((r) => {
@@ -84,14 +84,14 @@ function App() {
             <Navigate to="/" />
           )} /> */}
         <Route path="/home" element={<Home/>}/>
-        <Route path="/" element={<div className="auth-container">
-                                  <img src={Authenticate} alt="authenticate" className="authentication-svg" />
-                                  <h1>LOG IN OR SIGN UP TO VIEW POSTS</h1>
-                                </div>} />
         <Route path="/posts" element={currentUser ? (
             <PostList/>
             ) : (
             <Navigate to="/" />)} />
+        <Route path="/" element={<div className="auth-container">
+                                  <img src={Authenticate} alt="authenticate" className="authentication-svg" />
+                                  <h1>LOG IN OR SIGN UP TO VIEW POSTS</h1>
+                                </div>} />
       </Routes>
       <Footer />
     </main>
