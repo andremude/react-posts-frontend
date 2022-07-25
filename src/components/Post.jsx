@@ -28,10 +28,10 @@ const Post = ({title, content, user, id, post, getPosts, currentUser}) => {
       <br />
       <p>{content}</p>
       <div className='post-footer'>
-        <Likes />
+        {/* <Likes /> */}
         {/* <DeleteIcon onClick={() => deletePost()} className='delete-icon'/> */}
       </div>
-      {/* <div className='asterisks'>* * *</div> */}
+      <div className='asterisks'>* * *</div>
     </div>
   )
 }

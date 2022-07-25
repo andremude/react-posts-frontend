@@ -15,7 +15,6 @@ function NavBar({ currentUser, onLogout }) {
       <div>
         {currentUser ? (
           <div className="username-container">
-            {/* <Link to="/profile">Profile</Link> */}
             <img src={Avatar} alt="Avatar" className="profile-avatar" />
             <p className="username">{currentUser.username}</p>
             <button onClick={onLogout} className="logout-btn">Log Out</button>

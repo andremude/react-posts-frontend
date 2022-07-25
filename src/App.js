@@ -71,19 +71,9 @@ function App() {
     <NavBar currentUser={currentUser} onLogout={handleLogout} />
     <main>
       <Routes>
+        <Route path="/" element={<Home/>}/>
         <Route path="/signup" element={<SignUp onUpdateUser={onUpdateUser} />} />
         <Route path="/login" element={<Login onUpdateUser={onUpdateUser} />} />
-        {/* <Route path="/profile" element={ currentUser ? (
-            <Profile currentUser={currentUser} onUpdateUser={onUpdateUser} />
-          ) : (
-            <Navigate to="/" />
-          )} /> */}
-        {/* <Route path="/home" element={currentUser ? (
-            <h1>Welcome, {currentUser.username}</h1>
-            ) : (
-            <Navigate to="/" />
-          )} /> */}
-        <Route path="/" element={<Home/>}/>
         <Route path="/posts" element={currentUser ? (
             <PostList/>
             ) : (
@@ -97,9 +87,6 @@ function App() {
     </main>
     {showButton && (
       <img src={Arrow} alt="arrow" onClick={scrollToTop} className="back-to-top" />
-      // <button onClick={scrollToTop} className="back-to-top">
-        /* &#8679; */
-      // </button>
     )}
   </div>
   );

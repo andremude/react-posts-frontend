@@ -54,7 +54,6 @@ function SignUp({ onUpdateUser }) {
         onChange={handleChange}
       />
 
-      {/* <input type="submit" value="Signup" /> */}
       <button type="submit" className="signup-btn">Sign Up</button>
       <p>Already have an account? <Link to="/login"><b>Log In</b></Link></p>
     </form>

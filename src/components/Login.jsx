@@ -25,7 +25,6 @@ function Login({ onUpdateUser }) {
       },
       body:  JSON.stringify(formData),
     })
-      // .then((r) => r.json())
      .then((r) => {
         if (!r.ok) throw Error("Incorrect username or password!")
         .then(alert("Incorrect username or password!"))
@@ -33,7 +32,7 @@ function Login({ onUpdateUser }) {
         return r.json();
       })
       .then((user) => onUpdateUser(user))
-      .then(navigate('/home'))
+      .then(navigate('/'))
       // .then(window.location.reload())
   }
 
@@ -57,7 +56,6 @@ function Login({ onUpdateUser }) {
           onChange={handleChange}
           autoComplete="current-password"
         />
-        {/* <input type="submit" value="Login" /> */}
         <button type="submit" className="login-btn">Log In</button>
         <p>Don't have an account? <Link to="/signup"><b>Sign Up</b></Link></p>
       </form>

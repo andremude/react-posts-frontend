@@ -18,19 +18,19 @@ const Home = () => {
         <div className="card">
           <img src={Explore} alt="explore" className="card-svg" />
           <h3>Explore</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Find different topics of interest.</p>
         </div>
 
         <div className="card">
           <img src={Learn} alt="learn" className="card-svg" />
           <h3>Learn</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Information easily accessible.</p>
         </div>
 
         <div className="card">
           <img src={Connect} alt="connect" className="card-svg" />
           <h3>Connect</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Build relationships with other users.</p>
         </div>
       </div>
     </div>
