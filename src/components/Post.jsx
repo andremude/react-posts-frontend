@@ -16,7 +16,7 @@ const Post = ({title, content, user, id, getPosts}) => {
     <div className='post-container'>
       <div className='post-header'>
         <div className='post-title-user'>
-          <h2>{title}</h2>
+          <h2 className='post-title'>{title}</h2>
             <div className='post-user-delete'>
               <p>Posted by: <b>{user}</b></p>
               <MenuPopupState className="dots" deletePost={deletePost}/>
