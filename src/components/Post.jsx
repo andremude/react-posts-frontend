@@ -1,6 +1,5 @@
 import React from 'react'
 import '../styles/Post.css'
-// import Likes from './Likes'
 import MenuPopupState from './MenuPopupState.jsx'
 import axios from 'axios'
 
@@ -25,9 +24,7 @@ const Post = ({title, content, user, id, getPosts}) => {
       </div>
       <br />
       <p>{content}</p>
-      <div className='post-footer'>
-        {/* { <Likes/>} */}
-      </div>
+      <br />
       <div className='asterisks'>* * *</div>
     </div>
   )
