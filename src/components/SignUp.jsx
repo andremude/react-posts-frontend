@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import '../styles/SignUp.css'
 
 function SignUp({ onUpdateUser }) {
@@ -7,6 +8,8 @@ function SignUp({ onUpdateUser }) {
     username: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   function handleChange(e) {
     setFormData({
@@ -26,7 +29,8 @@ function SignUp({ onUpdateUser }) {
       body: JSON.stringify(formData),
     })
       .then((r) => r.json())
-      .then((user) => onUpdateUser(user));
+      .then((user) => onUpdateUser(user))
+      .then(navigate('/'));
   }
 
   const { username, password } = formData;
