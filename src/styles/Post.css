@@ -70,4 +70,11 @@
 
 .post-title-user {
   text-align: left;
+  width: 100%;
+}
+
+.post-user-delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

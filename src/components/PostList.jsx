@@ -5,7 +5,7 @@ import axios from 'axios'
 import Form from './Form'
 import '../styles/PostList.css'
 
-const PostList = ({id}) => {
+const PostList = (user) => {
 
   const [posts, setPosts] = useState([])
   const [isUpdate, setUpdate] = useState(false)
@@ -38,7 +38,7 @@ const PostList = ({id}) => {
             key={post.id}
             title={post.title}
             content={post.content}
-            user={post.user_id}
+            user={post.user.username}
             id={post.id}
             getPosts={getPosts}
               />

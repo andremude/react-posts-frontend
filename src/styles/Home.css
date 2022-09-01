@@ -17,7 +17,8 @@
 }
 
 .how-works-container {
-  width: 900px;
+  /* width: 900px; */
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -26,13 +27,23 @@
   text-align: center;
 }
 
+
 .cards {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 30px;
 }
 
+@media(max-width: 768px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+  }
+}
 
 .card {
   width: 200px;
@@ -41,6 +52,12 @@
   box-shadow: rgba(214, 213, 213, 0.993);
   padding: 20px;
   text-align: center;
+}
+
+@media(max-width: 768px) {
+  .card {
+    margin: 10px;
+  }
 }
 
 .card img {
