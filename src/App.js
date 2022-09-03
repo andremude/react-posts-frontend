@@ -29,12 +29,6 @@ function App() {
       .catch((err) => console.error(err));
   }, []);
 
-  // useEffect(() => {
-  //   if (!currentUser) {
-  //     navigate("/login");
-  //   }
-  //   }, [currentUser, navigate]);
-
   function handleLogout() {
     fetch("http://localhost:3000/api/v1/logout", {
     method: "POST",
