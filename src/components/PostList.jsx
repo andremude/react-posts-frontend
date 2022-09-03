@@ -32,18 +32,17 @@ const PostList = (user) => {
     <>
     <Form updateList={updateList}/>
       <div className='post-list-container'>
-        {posts.map((post) => (
+          {posts.map((post) => (
           <>
-          <Post
-            key={post.id}
-            title={post.title}
-            content={post.content}
-            user={post.user.username}
-            id={post.id}
-            getPosts={getPosts}
-              />
+            <Post
+              key={post.id}
+              title={post.title}
+              content={post.content}
+              user={post.user.username}
+              id={post.id}
+              getPosts={getPosts} />
             </>
-            ))}
+          ))}
       </div>
     </>
   )

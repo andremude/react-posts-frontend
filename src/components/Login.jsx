@@ -25,15 +25,16 @@ function Login({ onUpdateUser }) {
       },
       body:  JSON.stringify(formData),
     })
-     .then((r) => {
-        if (!r.ok) throw Error("Incorrect username or password!")
+    .then((r) => {
+      if (!r.ok) {
+        throw Error("Incorrect username or password!")
         .then(alert("Incorrect username or password!"))
-        .then(navigate('/login'))
-        return r.json();
-      })
-      .then((user) => onUpdateUser(user))
-      .then(navigate('/'))
-      // .then(window.location.reload())
+      } else {
+        return r.json()
+        .then((user) => onUpdateUser(user))
+        .then(navigate('/'))
+      };
+    })
   }
 
   return (
