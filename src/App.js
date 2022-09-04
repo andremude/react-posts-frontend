@@ -77,8 +77,8 @@ function App() {
                                   <h1>LOG IN OR SIGN UP TO VIEW POSTS</h1>
                                 </div>} />
       </Routes>
-      <Footer />
     </main>
+    <Footer />
     {showButton && (
       <img src={Arrow} alt="arrow" onClick={scrollToTop} className="back-to-top" />
     )}

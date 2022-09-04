@@ -8,6 +8,10 @@ html {
   text-align: center;
   background-color: #d6d9dd;
   font-family: 'Lato', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .back-to-top {
