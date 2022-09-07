@@ -9,7 +9,16 @@ const Home = () => {
   return (
     <>
     <div className='home-hero'>
-      <h1>Explore. Learn. Connect.</h1>
+      {/* <h1>Explore. Learn. Connect.</h1> */}
+      <div class="wrapper">
+        <h1 class="hero-text">Explore.</h1>
+      </div>
+      <div class="wrapper">
+        <h1 class="hero-text">Learn.</h1>
+      </div>
+      <div class="wrapper">
+        <h1 class="hero-text">Connect.</h1>
+      </div>
       <Link to="/posts" className="btn-blue">Posts</Link>
     </div>
     <div className="how-works-container">
