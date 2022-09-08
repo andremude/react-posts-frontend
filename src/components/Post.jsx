@@ -7,7 +7,9 @@ import axios from 'axios'
 const Post = ({title, content, user, id, getPosts}) => {
 
   const deletePost = async () => {
-    await axios.delete(`http://localhost:3000/api/v1/posts/${id}`, { withCredentials: true })
+    // await axios.delete(`http://localhost:3000/api/v1/posts/${id}`
+    await axios.delete(`https://rails-posts-api.herokuapp.com/api/v1/posts/${id}`
+    , { withCredentials: true })
     getPosts()
   }
 

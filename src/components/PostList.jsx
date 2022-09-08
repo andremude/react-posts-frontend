@@ -16,7 +16,9 @@ const PostList = (user) => {
   }, [isUpdate])
 
   const getPosts = async () => {
-    const response = await axios.get('http://localhost:3000/api/v1/posts', { withCredentials: true })
+    // const response = await axios.get('http://localhost:3000/api/v1/posts'
+    const response = await axios.get('https://rails-posts-api.herokuapp.com/api/v1/posts'
+    , { withCredentials: true })
     const data = response.data
     setPosts(data.reverse())
   }

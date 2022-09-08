@@ -14,7 +14,9 @@ const Form = ({ updateList }) => {
     const dataPost = { title, content };
     try {
       const res = await axios
-      .post('http://localhost:3000/api/v1/posts',{post: dataPost}, {withCredentials: true})
+      // .post('http://localhost:3000/api/v1/posts'
+      .post("https://rails-posts-api.herokuapp.com/api/v1/posts"
+      ,{post: dataPost}, {withCredentials: true})
       updateList(res.data)
       setTitle("");
       setContent("");
