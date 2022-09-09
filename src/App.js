@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import {BrowserRouter as Route, Routes, useNavigate} from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes, useNavigate} from 'react-router-dom';
 import SignUp from "./components/SignUp"
 import Login from "./components/Login";
 import NavBar from "./components/NavBar";
@@ -8,8 +8,8 @@ import PostList from "./components/PostList";
 import Footer from "./components/Footer"
 import Home from "./components/Home";
 import "./styles/App.css"
-import Arrow from "./images/arrow.svg"
-import Authenticate from "./images/auth.svg"
+import Arrow from './images/arrow.svg'
+import Authenticate from './images/auth.svg'
 
 function App() {
 
