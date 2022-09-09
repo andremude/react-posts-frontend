@@ -20,7 +20,8 @@ function App() {
   useEffect(() => {
       // fetch("http://localhost:3000/api/v1/autologin"
       fetch("https://rails-posts-api.herokuapp.com/api/v1/autologin", {
-      credentials: "include",
+      // credentials: "include",
+      withCredentials: true,
     })
       .then((r) => {
         if (!r.ok) throw Error("Not logged in!");
