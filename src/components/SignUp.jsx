@@ -21,7 +21,8 @@ function SignUp({ onUpdateUser }) {
   function handleSubmit(e) {
     e.preventDefault();
     // fetch("http://localhost:3000/api/v1/signup"
-    fetch("https://rails-posts-api.herokuapp.com/api/v1/signup", {
+    fetch("https://rails-posts-api.herokuapp.com/api/v1/signup"
+    , {
       method: "POST",
       credentials: "include",
       headers: {
