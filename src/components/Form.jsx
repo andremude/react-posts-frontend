@@ -2,13 +2,12 @@ import React, {useState} from 'react'
 import '../styles/Form.css'
 import axios from 'axios'
 // import confetti from "https://cdn.skypack.dev/canvas-confetti@1";
-import confetti from 'canvas-confetti'
-
 
 const Form = ({ updateList }) => {
 
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
+  const confetti = require('canvas-confetti');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
