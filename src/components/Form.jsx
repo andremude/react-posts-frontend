@@ -20,7 +20,6 @@ const Form = ({ updateList }) => {
       updateList(res.data)
       setTitle("");
       setContent("");
-      // alert("Your post was successfully submitted")
 
     } catch(error) {
       console.log(error)

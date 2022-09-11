@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <>
     <div className='home-hero'>
-      {/* <h1>Explore. Learn. Connect.</h1> */}
       <div className="wrapper">
         <h1 className="hero-text">Explore.</h1>
       </div>

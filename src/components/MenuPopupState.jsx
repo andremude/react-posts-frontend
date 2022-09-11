@@ -41,7 +41,6 @@ export default function PositionedMenu({deletePost}) {
           horizontal: 'left',
         }}
       >
-        {/* <MenuItem onClick={handleClose}>Edit</MenuItem> */}
         <MenuItem onClick={deletePost}>
           <DeleteIcon />
             Delete
