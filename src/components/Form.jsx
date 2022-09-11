@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import '../styles/Form.css'
 import axios from 'axios'
 // import confetti from "https://cdn.skypack.dev/canvas-confetti@1";
-import confetti from "canvas-confetti"
 
 const Form = ({ updateList }) => {
 
@@ -25,10 +24,10 @@ const Form = ({ updateList }) => {
     } catch(error) {
       console.log(error)
     }
-    confetti({
-      particleCount: 150,
-      spread: 60
-    });
+    // confetti({
+    //   particleCount: 150,
+    //   spread: 60
+    // });
   }
 
   return (
