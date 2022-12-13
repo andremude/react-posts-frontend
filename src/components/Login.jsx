@@ -18,7 +18,7 @@ function Login({ onUpdateUser }) {
  function handleSubmit(e) {
     e.preventDefault();
     //  fetch("http://localhost:3000/api/v1/login"
-     fetch("https://rails-posts-api.herokuapp.com/api/v1/login"
+     fetch("https://rails-posts-app.herokuapp.com/api/v1/login"
      , {
       method: "POST",
       credentials: "include",
