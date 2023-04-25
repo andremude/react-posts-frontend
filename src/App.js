@@ -17,38 +17,18 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //     // fetch("http://localhost:3000/api/v1/autologin"
-  //     fetch("https://rails-posts-api.fly.dev/api/v1/autologin"
-  //     , {
-  //     credentials: "include",
-  //   })
-  //     .then((r) => {
-  //       if (!r.ok) throw Error("Not logged in!");
-  //       return r.json();
-  //     })
-  //     .then((user) => setCurrentUser(user))
-  //     .catch((err) => console.error(err));
-  // }, []);
-
   useEffect(() => {
-    const storedUser = localStorage.getItem("currentUser");
-    if (storedUser) {
-      setCurrentUser(JSON.parse(storedUser));
-    } else {
-      fetch("https://rails-posts-api.fly.dev/api/v1/autologin", {
-        credentials: "include",
-      })
-      .then((user) => {
-        setCurrentUser(user);
-        localStorage.setItem("currentUser", JSON.stringify(user));
-      })
+      // fetch("http://localhost:3000/api/v1/autologin"
+      fetch("https://rails-posts-api.fly.dev/api/v1/autologin"
+      , {
+      credentials: "include",
+    })
       .then((r) => {
         if (!r.ok) throw Error("Not logged in!");
         return r.json();
       })
-        .catch((err) => console.error(err));
-    }
+      .then((user) => setCurrentUser(user))
+      .catch((err) => console.error(err));
   }, []);
 
   function handleLogout() {
@@ -61,7 +41,6 @@ function App() {
       .then((r) => r.json())
       .then(() => setCurrentUser(null));
       navigate("/login")
-      .then(() => localStorage.removeItem("currentUser"));
   }
 
   function onUpdateUser(user) {
