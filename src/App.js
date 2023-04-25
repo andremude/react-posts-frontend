@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
       // fetch("http://localhost:3000/api/v1/autologin"
-      fetch("https://rails-posts-app.herokuapp.com/api/v1/autologin"
+      fetch("https://rails-posts-api.fly.dev/api/v1/autologin"
       , {
       credentials: "include",
     })
@@ -33,7 +33,7 @@ function App() {
 
   function handleLogout() {
     // fetch("http://localhost:3000/api/v1/logout"
-    fetch("https://rails-posts-app.herokuapp.com/api/v1/logout"
+    fetch("https://rails-posts-api.fly.dev/api/v1/logout"
     , {
     method: "POST",
     credentials: "include",
