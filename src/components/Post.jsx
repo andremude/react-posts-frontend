@@ -8,7 +8,7 @@ const Post = ({title, content, user, id, getPosts}) => {
 
   const deletePost = async () => {
     // await axios.delete(`http://localhost:3000/api/v1/posts/${id}`
-    await axios.delete(`https://rails-posts-app.herokuapp.com/api/v1/posts/${id}`
+    await axios.delete(`https://rails-posts-api.fly.dev/api/v1/posts/${id}`
     , { withCredentials: true })
     getPosts()
   }
